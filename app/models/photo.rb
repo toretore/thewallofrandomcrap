@@ -3,7 +3,7 @@ class Photo < Post
   acts_as_image
 
   self.image_sizes = {
-    :large => ["640x480!", :crop],
+    #:large => ["640x480!", :crop],
     :medium => ["320x240!", :crop],
     :small => ["200x150!", :crop],
     :thumb => ["100x100!", :crop],

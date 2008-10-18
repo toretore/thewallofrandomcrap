@@ -29,11 +29,20 @@ body {
     height: 150px;
     margin: 3px 0 0 3px;
     background: #f0f0f0; }
-    #posts .item .title {
-      font-size: 100%;
-      background: #e8e8e8;
-      text-align: center;
-      padding: 0.25em; }
+  #posts .note .title {
+    font-size: 100%;
+    background: #e8e8e8;
+    text-align: center;
+    padding: 0.25em; }
+  #posts .photo {
+    position: relative; }
+    #posts .photo .title, #posts .photo .body {
+      position: absolute;
+      width: 100%; }
+    #posts .photo .title {
+      top: 0; }
+    #posts .photo .body {
+      bottom: 0; }
 
 #twits-wrapper {
   float: right;

@@ -60,7 +60,8 @@ body {
         text-align: center; }
       #content #user_info form p.button input, #content #user_info form.button-to input {
         color: #fff;
-        padding: 0.2em 1em; }
+        padding: 0.2em 1em;
+        text-shadow: #000 1px 1px; }
         #content #user_info form p.button input::-moz-focus-inner,         #content #user_info form.button-to input::-moz-focus-inner {
           padding: 0;
           display: block;

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081018022449) do
+ActiveRecord::Schema.define(:version => 20081018030248) do
 
   create_table "open_id_authentication_associations", :force => true do |t|
     t.integer "issued"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(:version => 20081018022449) do
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "identifier"
   end
 
 end

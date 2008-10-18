@@ -1,4 +1,5 @@
 db/*.sqlite3
 config/database.yml
+config/twitter.yml
 *.swp
 public/images/uploads

@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(:version => 20081018152126) do
     t.string   "profile_image_url"
     t.string   "url"
     t.integer  "twitter_id"
+    t.datetime "twitted_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

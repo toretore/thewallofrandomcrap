@@ -43,7 +43,7 @@ StickyBoard.Twits = ActiveElement.Collection.spawn('twit', {
       twits._interval = setInterval(function(){
         new Ajax.Request('/twits', {
           method: 'get',
-          parameters: {last_id:twits.first().get('id')},
+          parameters: {last_id:(twits.first() && twits.first().get('id'))},
           onSuccess: function(res){
             twits.insertNewTwits(res.responseText);
           }

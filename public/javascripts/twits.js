@@ -39,17 +39,15 @@ StickyBoard.Twits = ActiveElement.Collection.spawn('twit', {
 
   watch: function(){
     var twits = this;
-    setTimeout(function(){
-      twits._interval = setInterval(function(){
-        new Ajax.Request('/twits', {
-          method: 'get',
-          parameters: {last_id:(twits.first() && twits.first().get('id'))},
-          onSuccess: function(res){
-            twits.insertNewTwits(res.responseText);
-          }
-        });
-      }, 14000);
-    }, 7000);
+    twits._interval = setInterval(function(){
+      new Ajax.Request('/twits', {
+        method: 'get',
+        parameters: {last_id:(twits.first() && twits.first().get('id'))},
+        onSuccess: function(res){
+          twits.insertNewTwits(res.responseText);
+        }
+      });
+    }, 60000);
   }
 
 });

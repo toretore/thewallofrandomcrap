@@ -4,6 +4,6 @@
   <% end -%>
   <h3 class="field title"><%= h(post.title) %></h3>
   <div class="field body">
-    <%= h(post.body) %>
+    <%= simple_format(h(post.body)) %>
   </div>
 </div>

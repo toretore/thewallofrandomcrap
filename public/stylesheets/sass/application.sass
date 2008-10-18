@@ -109,18 +109,19 @@ body
         padding: 0.2em
         opacity: 0.5
 
-      &.highlighted
-        background: #f00 !important
-
-        .title
-          background: #900 !important
-
     .note
       background: #ff6
       opacity: 0.75
 
       &:hover, &:focus
         opacity: 1
+
+      &.highlighted
+        background: #000 !important
+        color: #fff !important
+
+        .title
+          background: #333 !important
 
       .title
         background: #cc3
@@ -178,6 +179,13 @@ body
         .title, .body
           opacity: 1
 
+      &.highlighted
+        background: #f00 !important
+        opacity: 0.75 !important
+
+        .title, .body
+          opacity: 1 !important
+
 #twits-wrapper
   float: right
   width: 15%
@@ -207,8 +215,14 @@ body
     color: #fff
     text-shadow: #000 1px 1px
 
+    &.highlighted
+      background: rgba(255,255,0,0.5)
+
     &.odd
       background: rgba(0,0,0,0.5)
+
+      &.highlighted
+        background: rgba(200,200,0,0.5)
 
     a
       color: #fff

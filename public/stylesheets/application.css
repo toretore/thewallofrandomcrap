@@ -90,15 +90,16 @@ body {
         font-size: 70%;
         padding: 0.2em;
         opacity: 0.5; }
-      #content #posts .post.highlighted {
-        background: #f00 !important; }
-        #content #posts .post.highlighted .title {
-          background: #900 !important; }
     #content #posts .note {
       background: #ff6;
       opacity: 0.75; }
       #content #posts .note:hover, #content #posts .note:focus {
         opacity: 1; }
+      #content #posts .note.highlighted {
+        background: #000 !important;
+        color: #fff !important; }
+        #content #posts .note.highlighted .title {
+          background: #333 !important; }
       #content #posts .note .title {
         background: #cc3; }
       #content #posts .note .body p {
@@ -138,6 +139,11 @@ body {
         opacity: 0.25; }
       #content #posts .photo:hover .title, #content #posts .photo:hover .body,       #content #posts .photo:focus .title, #content #posts .photo:focus .body {
         opacity: 1; }
+      #content #posts .photo.highlighted {
+        background: #f00 !important;
+        opacity: 0.75 !important; }
+        #content #posts .photo.highlighted .title, #content #posts .photo.highlighted .body {
+          opacity: 1 !important; }
 
 #twits-wrapper {
   float: right;
@@ -164,7 +170,11 @@ body {
     padding: 0.5em;
     color: #fff;
     text-shadow: #000 1px 1px; }
+    #twits .twit.highlighted {
+      background: rgba(255,255,0,0.5); }
     #twits .twit.odd {
       background: rgba(0,0,0,0.5); }
+      #twits .twit.odd.highlighted {
+        background: rgba(200,200,0,0.5); }
     #twits .twit a {
       color: #fff; }

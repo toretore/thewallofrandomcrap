@@ -1,4 +1,7 @@
 <div class="item post <%= post.class.name.downcase %>" id="post_<%= post.id %>">
+  <% if post.is_a? Photo -%>
+    <%= image_tag post.url(:small) %>
+  <% end -%>
   <h3 class="field title"><%= h(post.title) %></h3>
   <div class="field body">
     <%= h(post.body) %>

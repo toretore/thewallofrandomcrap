@@ -25,5 +25,7 @@ namespace :deploy do
     %w[database.yml].each do |c|
       run "ln -nsf #{shared_path}/system/config/#{c} #{current_path}/config/#{c}"
     end
+
+    run "ln -nsf #{shared_path}/system/uploads #{current_path}/public/images/uploads"
   end
 end

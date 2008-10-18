@@ -1,0 +1,6 @@
+<div class="item post <%= post.class.name.downcase %>" id="post_<%= post.id %>">
+  <h3 class="field title"><%= h(post.title) %></h3>
+  <div class="field body">
+    <%= h(post.body) %>
+  </div>
+</div>

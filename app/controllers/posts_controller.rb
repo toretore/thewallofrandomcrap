@@ -2,10 +2,11 @@ class PostsController < ApplicationController
 
 
   def index
-    @posts = if params[:last_id]
-      Post.all(:limit => 30, :order => "posts.id DESC", :conditions => ["posts.id > ?", params[:last_id]])
+    if params[:last_id]
+      @posts = Post.all(:limit => 30, :order => "posts.id DESC", :conditions => ["posts.id > ?", params[:last_id]])
     else
-      Post.all(:limit => 30, :order => "posts.id DESC")
+      @posts = Post.all(:limit => 30, :order => "posts.id DESC")
+      @twits = Twit.all(:limit => 20, :order => "twits.id DESC")
     end
 
     if request.xhr?

@@ -1,0 +1,4 @@
+<% div_for twit do -%>
+  <%= link_to "@#{twit.screen_name}", "http://twitter.com/#{twit.screen_name}", :class => "field screen_name" %>:
+  <%= h(twit.text) %>
+<% end -%>

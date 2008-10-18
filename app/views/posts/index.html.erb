@@ -1,3 +1,7 @@
 <div id="posts">
   <%= render :partial => "post", :collection => @posts %>
 </div>
+
+<% content_for :twits do -%>
+  <%= render :partial => "twits/twit", :collection => @twits %>
+<% end -%>

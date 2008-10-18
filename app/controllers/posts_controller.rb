@@ -6,7 +6,7 @@ class PostsController < ApplicationController
       @posts = Post.all(:limit => 30, :order => "posts.id DESC", :conditions => ["posts.id > ?", params[:last_id]])
     else
       @posts = Post.all(:limit => 30, :order => "posts.id DESC")
-      @twits = Twit.all(:limit => 20, :order => "twits.id DESC")
+      @twits = Twit.by_time(:limit => 20)
     end
 
     if request.xhr?

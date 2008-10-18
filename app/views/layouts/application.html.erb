@@ -7,6 +7,9 @@
     <link rel="contents" href="#content" />
     <%= javascript_include_tag 'prototype' %>
     <%= javascript_include_tag 'application' %>
+    <%= javascript_include_tag 'class' %>
+    <%= javascript_include_tag 'active_element' %>
+    <%= javascript_include_tag 'posts' %>
     <%= stylesheet_link_tag 'application' %>
     <%= yield :head %>
   </head>
@@ -15,8 +18,8 @@
     <div id="container-wrapper">
       <div id="container">
 
-        <div id="posts-wrapper">
-          <div id="posts">
+        <div id="content-wrapper">
+          <div id="content">
 
             <%= render :partial => "logins/sidebar" %>
 

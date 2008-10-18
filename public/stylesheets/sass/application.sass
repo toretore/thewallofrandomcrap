@@ -17,12 +17,12 @@ body
 #container
   height: 100%
 
-#posts-wrapper
+#content-wrapper
   float: left
   width: 85%
   height: 100%
 
-#posts
+#content
   overflow: hidden
 
   #user_info
@@ -82,7 +82,7 @@ body
           background-color: rgba(255,255,255,0.75)
           color: #000
 
-  .item
+  .post
     float: left
     width: 200px
     height: 150px
@@ -104,6 +104,12 @@ body
       font-size: 70%
       padding: 0.2em
       opacity: 0.5
+
+    &.highlighted
+      background: #f00 !important
+
+      .title
+        background: #900 !important
 
   .note
     background: #ff6

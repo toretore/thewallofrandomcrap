@@ -9,7 +9,8 @@ html, body {
 body {
   font-family: Verdana, Arial, sans-serif;
   height: 100%;
-  font-size: 90%; }
+  font-size: 90%;
+  overflow: hidden; }
 
 #container-wrapper {
   height: 100%; }
@@ -67,74 +68,76 @@ body {
         #content #user_info form p.button input:hover, #content #user_info form p.button input:focus,         #content #user_info form.button-to input:hover, #content #user_info form.button-to input:focus {
           background-color: rgba(255,255,255,0.75);
           color: #000; }
-  #content .post {
-    float: left;
-    width: 200px;
-    height: 150px;
-    margin: 5px;
-    background: #f0f0f0;
-    -moz-box-shadow: #000 2px 2px 1px;
-    position: relative; }
-    #content .post .title {
-      font-size: 100%;
-      text-align: center;
-      padding: 0.25em 0;
-      text-shadow: #000 0 0 1px; }
-    #content .post .name {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      font-size: 70%;
-      padding: 0.2em;
-      opacity: 0.5; }
-    #content .post.highlighted {
-      background: #f00 !important; }
-      #content .post.highlighted .title {
-        background: #900 !important; }
-  #content .note {
-    background: #ff6;
-    opacity: 0.75; }
-    #content .note:hover, #content .note:focus {
-      opacity: 1; }
-    #content .note .title {
-      background: #cc3; }
-    #content .note .body p {
-      padding: 0.25em; }
-    #content .note.koda {
-      background: #f6f; }
-      #content .note.koda .title {
-        background: #c3c; }
-    #content .note.basanda {
-      background: #6ff; }
-      #content .note.basanda .title {
-        background: #3cc; }
-    #content .note.bosoya {
-      background: #6f6; }
-      #content .note.bosoya .title {
-        background: #3c3; }
-  #content .photo {
-    position: relative; }
-    #content .photo .title, #content .photo .body {
-      position: absolute;
-      width: 100%;
-      background: rgba(255,255,255,0.5);
-      opacity: 0.25;
-      color: #000; }
-    #content .photo .title {
-      top: 0; }
-    #content .photo .body {
-      bottom: 0;
-      text-align: center;
-      font-size: 80%;
-      max-height: 75px;
-      overflow: auto;
-      padding-bottom: 1.5em; }
-      #content .photo .body p {
+  #content #posts {
+    overflow: auto; }
+    #content #posts .post {
+      float: left;
+      width: 200px;
+      height: 150px;
+      margin: 5px;
+      background: #f0f0f0;
+      -moz-box-shadow: #000 2px 2px 1px;
+      position: relative; }
+      #content #posts .post .title {
+        font-size: 100%;
+        text-align: center;
+        padding: 0.25em 0;
+        text-shadow: #000 0 0 1px; }
+      #content #posts .post .name {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        font-size: 70%;
+        padding: 0.2em;
+        opacity: 0.5; }
+      #content #posts .post.highlighted {
+        background: #f00 !important; }
+        #content #posts .post.highlighted .title {
+          background: #900 !important; }
+    #content #posts .note {
+      background: #ff6;
+      opacity: 0.75; }
+      #content #posts .note:hover, #content #posts .note:focus {
+        opacity: 1; }
+      #content #posts .note .title {
+        background: #cc3; }
+      #content #posts .note .body p {
         padding: 0.25em; }
-    #content .photo .name {
-      opacity: 0.25; }
-    #content .photo:hover .title, #content .photo:hover .body,     #content .photo:focus .title, #content .photo:focus .body {
-      opacity: 1; }
+      #content #posts .note.koda {
+        background: #f6f; }
+        #content #posts .note.koda .title {
+          background: #c3c; }
+      #content #posts .note.basanda {
+        background: #6ff; }
+        #content #posts .note.basanda .title {
+          background: #3cc; }
+      #content #posts .note.bosoya {
+        background: #6f6; }
+        #content #posts .note.bosoya .title {
+          background: #3c3; }
+    #content #posts .photo {
+      position: relative; }
+      #content #posts .photo .title, #content #posts .photo .body {
+        position: absolute;
+        width: 100%;
+        background: rgba(255,255,255,0.5);
+        opacity: 0.25;
+        color: #000; }
+      #content #posts .photo .title {
+        top: 0; }
+      #content #posts .photo .body {
+        bottom: 0;
+        text-align: center;
+        font-size: 80%;
+        max-height: 75px;
+        overflow: auto;
+        padding-bottom: 1.5em; }
+        #content #posts .photo .body p {
+          padding: 0.25em; }
+      #content #posts .photo .name {
+        opacity: 0.25; }
+      #content #posts .photo:hover .title, #content #posts .photo:hover .body,       #content #posts .photo:focus .title, #content #posts .photo:focus .body {
+        opacity: 1; }
 
 #twits-wrapper {
   float: right;
@@ -144,7 +147,7 @@ body {
 #twits {
   height: 100%;
   background: rgba(0,0,0,0.25);
-  border-left: 1px solid rgba(0,0,0,0.3);
+  border-left: 1px solid rgba(0,0,0,0.5);
   -moz-box-shadow: #000 0 0 2px; }
   #twits .title {
     padding: 0.25em;
@@ -156,3 +159,12 @@ body {
       font-size: 200%;
       color: #fff;
       text-shadow: #fff 0 0 2px; }
+  #twits .twit {
+    background: rgba(0,0,0,0.25);
+    padding: 0.5em;
+    color: #fff;
+    text-shadow: #000 1px 1px; }
+    #twits .twit.odd {
+      background: rgba(0,0,0,0.5); }
+    #twits .twit a {
+      color: #fff; }

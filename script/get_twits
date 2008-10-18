@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+require File.join(File.dirname(__FILE__), '..', 'config', 'environment')
+require "twitter"
+
+TWITTER_CONFIG = YAML.load_file(File.join(File.dirname(__FILE__), '..', 'config', 'twitter.yml'))
+
+loop do
+
+  begin
+    last_twit = Twit.by_time.first
+    Twitter::Base.new(*TWITTER_CONFIG.values_at("username", "password")).replies.reject do |reply|
+      last_twit && Time.parse(reply.created_at) < last_twit.created_at
+    end.sort{|a,b| Time.parse(a.created_at) <=> Time.parse(b.created_at) }.each do |reply|
+      Twit.create(:screen_name => reply.user.screen_name, :name => reply.user.name, :text => reply.text, :url => reply.user.url,
+        :profile_image_url => reply.user.profile_image_url, :twitter_id => reply.id, :twitted_at => Time.parse(reply.created_at))
+    end
+  rescue Exception => e
+    Rails.logger.error("\n\nTWITTER: #{e.message}")
+    Rails.logger.error(e.backtrace.join("\n")+"\n\n")
+  end
+
+  sleep 5
+
+end

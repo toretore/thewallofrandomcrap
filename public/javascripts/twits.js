@@ -15,7 +15,7 @@ StickyBoard.Twits = ActiveElement.Collection.spawn('twit', {
   
   insertNewTwits: function(html){
     this.first().element.insert({before:html});
-    this.reload(this.first().get('id'));
+    this.reload(this.first() && this.first().get('id'));
   },
   
   reload: function(lastId){

@@ -6,6 +6,7 @@
     </p>
     <p>
       mailto:<%= mail_to "#{current_user.identifier}@#{request.host}", "#{current_user.identifier}@TWORC" %>
+      <span style="font-size:80%">(Cam phone!!!)</span>
     </p>
     <%= button_to 'Log out', login_url, :method => :delete %>
   <% else -%>

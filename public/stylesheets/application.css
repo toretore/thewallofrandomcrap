@@ -25,11 +25,46 @@ body {
 #posts {
   overflow: hidden; }
   #posts #user_info {
-    background: rgba(0,0,0,0.75);
-    color: #fff; }
+    background: rgba(0,0,0,0.8);
+    -moz-box-shadow: #000 0 0 2px;
+    color: #fff;
+    overflow: hidden;
+    padding: 0.25em; }
+    #posts #user_info > * {
+      float: left; }
+    #posts #user_info p {
+      padding: 0.5em; }
+    #posts #user_info a {
+      color: #fff; }
     #posts #user_info .title {
-      background: rgba(255,255,255,0.15);
+      margin-right: 1em;
       text-shadow: #fff 0 0 1px; }
+    #posts #user_info form {
+      padding: 0.5em; }
+      #posts #user_info form p {
+        float: left;
+        margin: 0 0.25em;
+        padding: 0; }
+        #posts #user_info form p label {
+          font-size: 80%; }
+          #posts #user_info form p label:after {
+            content: ":"; }
+      #posts #user_info form input {
+        background: rgba(255,255,255,0.5);
+        border: none;
+        padding: 0.2em 0.4em;
+        -moz-border-radius: 0.3em;
+        text-align: center; }
+      #posts #user_info form p.button input, #posts #user_info form.button-to input {
+        color: #fff;
+        padding: 0.2em 1em; }
+        #posts #user_info form p.button input::-moz-focus-inner,         #posts #user_info form.button-to input::-moz-focus-inner {
+          padding: 0;
+          display: block;
+          border: none; }
+        #posts #user_info form p.button input:hover, #posts #user_info form p.button input:focus,         #posts #user_info form.button-to input:hover, #posts #user_info form.button-to input:focus {
+          background-color: rgba(255,255,255,0.75);
+          color: #000; }
   #posts .item {
     float: left;
     width: 200px;
@@ -92,4 +127,5 @@ body {
 #twits {
   height: 100%;
   background: rgba(0,0,0,0.25);
-  border-left: 1px solid rgba(0,0,0,0.3); }
+  border-left: 1px solid rgba(0,0,0,0.3);
+  -moz-box-shadow: #000 0 0 2px; }

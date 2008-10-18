@@ -3,7 +3,7 @@
   padding: 0
 
 html, body
-  background: #fff
+  background: url("/images/cork.jpg")
   height: 100%
 
 body
@@ -19,30 +19,64 @@ body
 
 #posts-wrapper
   float: left
-  width: 80%
+  width: 85%
   height: 100%
 
 #posts
   overflow: hidden
 
   #user_info
+    background: rgba(0,0,0,0.75)
+    color: #fff
+
+    .title
+      background: rgba(255,255,255,0.15)
+      text-shadow: #fff 0 0 1px
 
   .item
     float: left
     width: 200px
     height: 150px
-    margin: 3px 0 0 3px
+    margin: 5px
     background: #f0f0f0
+    -moz-box-shadow: #000 2px 2px 1px
 
     .title
       font-size: 100%
       text-align: center
+      padding: 0.25em 0
+      text-shadow: #000 0 0 1px
 
   .note
+    background: #ff6
+    opacity: 0.75
+
+    &:hover, &:focus
+      opacity: 1
 
     .title
-      background: #e8e8e8
+      background: #cc3
+
+    .body p
       padding: 0.25em
+
+    &.koda
+      background: #f6f
+
+      .title
+        background: #c3c
+
+    &.basanda
+      background: #6ff
+
+      .title
+        background: #3cc
+
+    &.bosoya
+      background: #6f6
+
+      .title
+        background: #3c3
 
   .photo
     position: relative
@@ -56,7 +90,6 @@ body
 
     .title
       top: 0
-      padding: 0.25em
 
     .body
       bottom: 0
@@ -75,10 +108,10 @@ body
 
 #twits-wrapper
   float: right
-  width: 20%
+  width: 15%
   height: 100%
 
 #twits
   height: 100%
-  background: #f8f8f8
-  border-left: 1px solid #f0f0f0
+  background: rgba(0,0,0,0.25)
+  border-left: 1px solid rgba(0,0,0,0.3)

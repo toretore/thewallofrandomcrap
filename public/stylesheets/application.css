@@ -3,7 +3,7 @@
   padding: 0; }
 
 html, body {
-  background: #fff;
+  background: url("/images/cork.jpg");
   height: 100%; }
 
 body {
@@ -19,23 +19,50 @@ body {
 
 #posts-wrapper {
   float: left;
-  width: 80%;
+  width: 85%;
   height: 100%; }
 
 #posts {
   overflow: hidden; }
+  #posts #user_info {
+    background: rgba(0,0,0,0.75);
+    color: #fff; }
+    #posts #user_info .title {
+      background: rgba(255,255,255,0.15);
+      text-shadow: #fff 0 0 1px; }
   #posts .item {
     float: left;
     width: 200px;
     height: 150px;
-    margin: 3px 0 0 3px;
-    background: #f0f0f0; }
+    margin: 5px;
+    background: #f0f0f0;
+    -moz-box-shadow: #000 2px 2px 1px; }
     #posts .item .title {
       font-size: 100%;
-      text-align: center; }
-  #posts .note .title {
-    background: #e8e8e8;
-    padding: 0.25em; }
+      text-align: center;
+      padding: 0.25em 0;
+      text-shadow: #000 0 0 1px; }
+  #posts .note {
+    background: #ff6;
+    opacity: 0.75; }
+    #posts .note:hover, #posts .note:focus {
+      opacity: 1; }
+    #posts .note .title {
+      background: #cc3; }
+    #posts .note .body p {
+      padding: 0.25em; }
+    #posts .note.koda {
+      background: #f6f; }
+      #posts .note.koda .title {
+        background: #c3c; }
+    #posts .note.basanda {
+      background: #6ff; }
+      #posts .note.basanda .title {
+        background: #3cc; }
+    #posts .note.bosoya {
+      background: #6f6; }
+      #posts .note.bosoya .title {
+        background: #3c3; }
   #posts .photo {
     position: relative; }
     #posts .photo .title, #posts .photo .body {
@@ -45,8 +72,7 @@ body {
       opacity: 0.25;
       color: #000; }
     #posts .photo .title {
-      top: 0;
-      padding: 0.25em; }
+      top: 0; }
     #posts .photo .body {
       bottom: 0;
       text-align: center;
@@ -60,10 +86,10 @@ body {
 
 #twits-wrapper {
   float: right;
-  width: 20%;
+  width: 15%;
   height: 100%; }
 
 #twits {
   height: 100%;
-  background: #f8f8f8;
-  border-left: 1px solid #f0f0f0; }
+  background: rgba(0,0,0,0.25);
+  border-left: 1px solid rgba(0,0,0,0.3); }

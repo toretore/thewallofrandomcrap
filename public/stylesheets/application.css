@@ -96,7 +96,8 @@ body {
         opacity: 0.5; }
     #content #posts .note {
       background: #ff6;
-      opacity: 0.75; }
+      opacity: 0.75;
+      overflow: auto; }
       #content #posts .note:hover, #content #posts .note:focus {
         opacity: 1; }
       #content #posts .note.highlighted {
@@ -107,7 +108,8 @@ body {
       #content #posts .note .title {
         background: #cc3; }
       #content #posts .note .body p {
-        padding: 0.25em; }
+        padding: 0.25em;
+        font-size: 90%; }
       #content #posts .note.koda {
         background: #f6f; }
         #content #posts .note.koda .title {

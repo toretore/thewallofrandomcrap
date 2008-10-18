@@ -32,6 +32,9 @@ body
     overflow: hidden
     padding: 0.25em
 
+    h1
+      font-size: 200%
+
     & > *
       float: left
 
@@ -86,12 +89,21 @@ body
     margin: 5px
     background: #f0f0f0
     -moz-box-shadow: #000 2px 2px 1px
+    position: relative
 
     .title
       font-size: 100%
       text-align: center
       padding: 0.25em 0
       text-shadow: #000 0 0 1px
+
+    .name
+      position: absolute
+      bottom: 0
+      right: 0
+      font-size: 70%
+      padding: 0.2em
+      opacity: 0.5
 
   .note
     background: #ff6
@@ -143,9 +155,13 @@ body
       font-size: 80%
       max-height: 75px
       overflow: auto
+      padding-bottom: 1.5em
 
       p
         padding: 0.25em
+
+    .name
+      opacity: 0.25
 
     &:hover, &:focus
       
@@ -162,3 +178,15 @@ body
   background: rgba(0,0,0,0.25)
   border-left: 1px solid rgba(0,0,0,0.3)
   -moz-box-shadow: #000 0 0 2px
+
+  .title
+    padding: 0.25em
+    background: rgba(0,0,0,0.75)
+    margin-left: -1px
+    text-align: center
+    -moz-box-shadow: #000 0 0 2px
+
+    h2
+      font-size: 200%
+      color: #fff
+      text-shadow: #fff 0 0 2px

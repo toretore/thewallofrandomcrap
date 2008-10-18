@@ -7,7 +7,9 @@ TWITTER_CONFIG = YAML.load_file(File.join(File.dirname(__FILE__), '..', 'config'
 loop do
 
   begin
+    Rails.logger.info("\n\nGetting tweets..")
     last_twit = Twit.by_time.first
+    Rails.logger.info("Last tweet at: #{last_twit.twitted_at}")
     Twitter::Base.new(*TWITTER_CONFIG.values_at("username", "password")).replies.reject do |reply|
       last_twit && Time.parse(reply.created_at) < last_twit.created_at
     end.sort{|a,b| Time.parse(a.created_at) <=> Time.parse(b.created_at) }.each do |reply|

@@ -10,8 +10,6 @@ class PostsController < ApplicationController
 
     if request.xhr?
       @posts.empty? ? render(:text => ":(", :status => 404) : render(:partial => "post", :collection => @posts)
-    else
-      @posts.shift()
     end
   end
 

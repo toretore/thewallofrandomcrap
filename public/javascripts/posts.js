@@ -27,7 +27,7 @@ StickyBoard.Posts = ActiveElement.Collection.spawn('post', {
       }
     });
   },
-
+  
   watch: function(){
     var posts = this;
     this._interval = setInterval(function(){
@@ -38,7 +38,7 @@ StickyBoard.Posts = ActiveElement.Collection.spawn('post', {
           posts.insertNewPosts(res.responseText);
         }
       });
-    }, 15000);
+    }, 14000);
   }
 
 });
@@ -59,9 +59,9 @@ StickyBoard.Post = ActiveElement.Base.spawn('post', {
   highlight: function(){
     var post = this;
     post.set('highlighted', true);
-    setInterval(function(){
+    setTimeout(function(){
       post.set('highlighted', false);
-    }, 1000);
+    }, 2000);
   }
 
 });

@@ -1,11 +1,11 @@
 <div id="user_info" class="item">
-  <h1>StickyBoard 3000</h1>
+  <h1 class="title">StickyBoard 3000</h1>
   <% if logged_in? -%>
     <p>
       <%= h(current_user.display_name) %>
     </p>
     <%= button_to 'Log out', login_url, :method => :delete %>
   <% else -%>
-    <%= render :partial => 'form' %>
+    <%= render :partial => 'logins/form' %>
   <% end -%>
 </div>

@@ -14,4 +14,9 @@ module ApplicationHelper
   end
 
 
+  def random_class_name
+    %w(koda basanda bosoya tikki)[rand(4)]
+  end
+
+
 end

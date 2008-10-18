@@ -24,9 +24,11 @@ body {
   height: 100%; }
 
 #content {
+  height: 100%;
   overflow: hidden; }
   #content #user_info {
     background: rgba(0,0,0,0.8);
+    border-bottom: 1px solid rgba(0,0,0,0.5);
     -moz-box-shadow: #000 0 0 2px;
     color: #fff;
     overflow: hidden;
@@ -61,15 +63,16 @@ body {
       #content #user_info form p.button input, #content #user_info form.button-to input {
         color: #fff;
         padding: 0.2em 1em;
-        text-shadow: #000 1px 1px; }
+        text-shadow: #000 1px 1px;
+        cursor: pointer; }
         #content #user_info form p.button input::-moz-focus-inner,         #content #user_info form.button-to input::-moz-focus-inner {
           padding: 0;
           display: block;
           border: none; }
         #content #user_info form p.button input:hover, #content #user_info form p.button input:focus,         #content #user_info form.button-to input:hover, #content #user_info form.button-to input:focus {
-          background-color: rgba(255,255,255,0.75);
-          color: #000; }
+          background-color: rgba(255,255,255,0.25); }
   #content #posts {
+    height: 100%;
     overflow: auto; }
     #content #posts .post {
       float: left;
@@ -77,7 +80,7 @@ body {
       height: 150px;
       margin: 5px;
       background: #f0f0f0;
-      -moz-box-shadow: #000 2px 2px 1px;
+      -moz-box-shadow: rgba(0,0,0,0.5) 3px 3px;
       position: relative; }
       #content #posts .post .title {
         font-size: 100%;
@@ -159,6 +162,7 @@ body {
   #twits .title {
     padding: 0.25em;
     background: rgba(0,0,0,0.75);
+    border-bottom: 1px solid rgba(0,0,0,0.5);
     margin-left: -1px;
     text-align: center;
     -moz-box-shadow: #000 0 0 2px; }
@@ -170,7 +174,8 @@ body {
     background: rgba(0,0,0,0.25);
     padding: 0.5em;
     color: #fff;
-    text-shadow: #000 1px 1px; }
+    text-shadow: #000 1px 1px;
+    font-size: 80%; }
     #twits .twit.highlighted {
       background: rgba(255,255,0,0.5); }
     #twits .twit.odd {
@@ -178,4 +183,10 @@ body {
       #twits .twit.odd.highlighted {
         background: rgba(200,200,0,0.5); }
     #twits .twit a {
-      color: #fff; }
+      color: #fff;
+      text-decoration: none;
+      background: rgba(255,255,255,0.25);
+      -moz-border-radius: 0.25em;
+      padding: 1px 0.5em; }
+      #twits .twit a:hover, #twits .twit a:focus {
+        background: rgba(255,255,255,0.5); }

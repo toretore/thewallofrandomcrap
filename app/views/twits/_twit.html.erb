@@ -1,4 +1,4 @@
-<% div_for twit do -%>
+<% div_for twit, :class => (twit_counter % 2 == 0 ? "odd" : "even") do -%>
   <%= link_to "@#{twit.screen_name}", "http://twitter.com/#{twit.screen_name}", :class => "field screen_name" %>:
   <%= h(twit.text) %>
 <% end -%>

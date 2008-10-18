@@ -5,7 +5,7 @@
       <%= h(current_user.display_name) %>
     </p>
     <p>
-      mailto:<%= mail_to "#{current_user.identifier}@#{request.host}" %>
+      mailto:<%= mail_to "#{current_user.identifier}@#{request.host}", "#{current_user.identifier}@StickyBoard" %>
     </p>
     <%= button_to 'Log out', login_url, :method => :delete %>
   <% else -%>

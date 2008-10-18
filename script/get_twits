@@ -19,6 +19,6 @@ loop do
     Rails.logger.error(e.backtrace.join("\n")+"\n\n")
   end
 
-  sleep 5
+  sleep 60
 
 end

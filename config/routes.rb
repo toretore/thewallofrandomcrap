@@ -38,7 +38,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resource :login
   map.complete_login 'login/complete', :controller => 'logins', :action => 'create', :requirements => {:method => :get}
   
-  map.root :controller => 'logins', :action => 'show'
+  map.root :controller => "posts"
 
   # Install the default routes as the lowest priority.
   map.connect ':controller/:action/:id'

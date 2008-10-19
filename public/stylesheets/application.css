@@ -32,7 +32,7 @@ body {
     -moz-box-shadow: #000 0 0 2px;
     color: #fff;
     overflow: hidden;
-    padding: 0.25em; }
+    padding: 8px; }
     #content #user_info h1 {
       font-size: 200%; }
     #content #user_info > * {
@@ -162,7 +162,7 @@ body {
   border-left: 1px solid rgba(0,0,0,0.5);
   -moz-box-shadow: #000 0 0 2px; }
   #twits .title {
-    padding: 0.25em;
+    padding: 8px;
     background: url("/images/black-75.png");
     border-bottom: 1px solid rgba(0,0,0,0.5);
     margin-left: -1px;

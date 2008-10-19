@@ -113,6 +113,8 @@ body {
             -moz-border-radius: 0.25em; }
             #content #posts .post .tools li a:hover, #content #posts .post .tools li a:focus {
               background: url("/images/black-75.png"); }
+      #content #posts .post.disabled {
+        opacity: 0.25; }
     #content #posts .note {
       background: #ff6;
       opacity: 0.75;

@@ -1,5 +1,5 @@
-<div class="item-wrapper">
-  <div class="item post <%= post.class.name.downcase %> <%= random_class_name %>" id="post_<%= post.id %>">
+<div class="post-wrapper">
+  <div class="post <%= post.class.name.downcase %> <%= random_class_name %>" id="post_<%= post.id %>">
 
     <% if post.is_a? Photo -%>
       <%= image_tag post.url(:small) %>

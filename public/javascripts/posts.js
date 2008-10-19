@@ -83,17 +83,19 @@ StickyBoard.Post = ActiveElement.Base.spawn('post', {
       e.stop();
       post.set('highlighted', true);
       if (confirm('Are you sure you want to delete this post?')) {
+        post.set('highlighted', false);
+        post.set('disabled', true)
         new Ajax.Request(form.readAttribute('action'), {
           method: 'delete',
           parameters: {authenticity_token: form.down('[name=authenticity_token]').value},
           onSuccess: function(){
-            post.fancyRemove();
+            setTimeout(function(){
+              post.remove();
+            }, 1000);
           },
           onFailure: function(){
             alert("FAIL");
-          },
-          onComplete: function(){
-            post.set('highlighted', false);
+            post.set('disabled', false);
           }
         });
       } else {

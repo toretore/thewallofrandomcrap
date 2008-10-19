@@ -43,7 +43,7 @@ StickyBoard.Posts = ActiveElement.Collection.spawn('post', {
           posts.insertNewPosts(res.responseText);
         }
       });
-    }, 5000);
+    }, 15000);
   }
 
 });

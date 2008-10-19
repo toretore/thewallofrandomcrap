@@ -37,6 +37,9 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resource :login
   map.complete_login 'login/complete', :controller => 'logins', :action => 'create', :requirements => {:method => :get}
+
+  map.resources :posts
+  map.resources :twits
   
   map.root :controller => "posts"
 

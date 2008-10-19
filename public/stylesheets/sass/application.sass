@@ -113,6 +113,34 @@ body
         padding: 0.2em
         opacity: 0.5
 
+      .tools
+        position: absolute
+        top: 3px
+        right: 3px
+        list-style-type: none
+        overflow: hidden
+        display: none
+
+      &:hover .tools, &:focus .tools
+        display: block
+
+        li
+          float: left
+
+          form.disabled
+            display: none
+
+          a
+            display: block
+            background: url("/images/black-25.png")
+            color: #fff
+            text-decoration: none
+            padding: 1px 4px
+            -moz-border-radius: 0.25em
+
+            &:hover, &:focus
+              background: url("/images/black-75.png")
+
     .note
       background: #ff6
       opacity: 0.75

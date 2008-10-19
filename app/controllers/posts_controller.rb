@@ -15,4 +15,14 @@ class PostsController < ApplicationController
   end
 
 
+  def destroy
+    current_user.posts.destroy(params[:id])
+
+    respond_to do |format|
+      format.html{ redirect_to root_url }
+      format.js{ head :ok }
+    end
+  end
+
+
 end

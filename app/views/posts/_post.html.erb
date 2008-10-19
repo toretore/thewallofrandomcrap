@@ -1,12 +1,23 @@
 <div class="item-wrapper">
   <div class="item post <%= post.class.name.downcase %> <%= random_class_name %>" id="post_<%= post.id %>">
+
     <% if post.is_a? Photo -%>
       <%= image_tag post.url(:small) %>
     <% end -%>
+
     <h3 class="field title"><%= h(post.title) %></h3>
+
+    <% if logged_in? && post.user == current_user -%>
+      <ul class="tools">
+        <li class="delete"><%= button_to "✘", post_url(post), :method => :delete %></li>
+      </ul>
+    <% end -%>
+
     <div class="field body">
       <%= simple_format(h(post.body)) %>
     </div>
+
     <p class="field name"><%= post.user.display_name %></p>
+
   </div>
 </div>

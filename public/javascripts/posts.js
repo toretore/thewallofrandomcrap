@@ -46,6 +46,7 @@ StickyBoard.Posts = ActiveElement.Collection.spawn('post', {
 StickyBoard.Post = ActiveElement.Base.spawn('post', {
 
   afterInitialize: function(){
+    this.hijackDeleteForm();
   },
   
   setHighlightedValue: function(b){
@@ -62,6 +63,14 @@ StickyBoard.Post = ActiveElement.Base.spawn('post', {
     setTimeout(function(){
       post.set('highlighted', false);
     }, 2000);
+  },
+
+  hijackDeleteForm: function(){
+    var form = this.element.down('.tools .delete form');
+    var link = new Element('a', {href:'#', 'class':'delete'});
+    link.update(form.down('input[type=submit]').value);
+    form.insert({after:link});
+    form.addClassName('disabled');
   }
 
 });

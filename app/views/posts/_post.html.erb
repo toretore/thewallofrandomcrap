@@ -14,7 +14,7 @@
     <% end -%>
 
     <div class="field body">
-      <%= simple_format(h(post.body)) %>
+      <%= simple_format(post.body.gsub(/<[^>]*>/, '')) %>
     </div>
 
     <p class="field name"><%= post.user.display_name %></p>

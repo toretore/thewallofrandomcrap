@@ -15,15 +15,20 @@ StickyBoard.Posts = ActiveElement.Collection.spawn('post', {
   
   insertNewPosts: function(html){
     this.element.insert({top:html});
-    this.reload(this.first().get('id'));
+    this.loadNew();
   },
   
-  reload: function(lastId){
-    lastId = parseInt(lastId);
-    this.items = this.findItems();
-    this.each(function(post){
-      if (parseInt(post.get('id')) > lastId) {
-        post.highlight();
+  //Find new posts from inserted HTML
+  //This is a bit hacky
+  loadNew: function(){
+    var posts = this;
+    this.element.select('.post').each(function(element){
+      if (!posts.any(function(p){ return p.element == element; })) {
+        //Here comes the hacky bit, relying on and changing the internals of the collection
+        var klass = posts.klass.fetchBaseClass();
+        var post = new klass(element);
+        post.collection = posts;
+        posts.items.unshift(post);
       }
     });
   },
@@ -38,7 +43,7 @@ StickyBoard.Posts = ActiveElement.Collection.spawn('post', {
           posts.insertNewPosts(res.responseText);
         }
       });
-    }, 15000);
+    }, 5000);
   }
 
 });
@@ -66,6 +71,7 @@ StickyBoard.Post = ActiveElement.Base.spawn('post', {
     var post = this,
         form = this.element.down('.tools .delete form');
 
+    //There's no form if current_user != post.user
     if (!form) return;
 
     //Replace form with a link
@@ -102,6 +108,7 @@ StickyBoard.Post = ActiveElement.Base.spawn('post', {
   //Override to remove wrapper element as well
   remove: function(){
     this.element.up('.post-wrapper').remove();
+    this.collection.removeItem(this);
   },
 
   //Disables the post, then removes after a short timeout (default 1 sec)

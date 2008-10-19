@@ -13,7 +13,15 @@ class PostReceiver < ActionMailer::Base
       end
 
       post.title = email.subject
-      post.body = email.body.gsub(/^Attachment:.*$/, '').strip
+
+      text_parts = email.parts.select{|p| p.content_type == "text/plain" }
+      if text_parts.any?
+        post.body = text_parts.map(&:body).join("\n\n")
+      else
+        post.body = email.body
+      end
+        
+      post.body = post.body.gsub(/^Attachment:.*$/, '').strip
 
       unless post.save
         logger.error("POST SAVE FAILED: #{post.errors.full_messages.join(',')}")

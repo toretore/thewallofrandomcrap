@@ -99,22 +99,19 @@ body {
         top: 3px;
         right: 3px;
         list-style-type: none;
-        overflow: hidden;
-        display: none; }
-      #content #posts .post:hover .tools, #content #posts .post:focus .tools {
-        display: block; }
-        #content #posts .post:hover .tools li,         #content #posts .post:focus .tools li {
+        overflow: hidden; }
+        #content #posts .post .tools li {
           float: left; }
-          #content #posts .post:hover .tools li form.disabled,           #content #posts .post:focus .tools li form.disabled {
+          #content #posts .post .tools li form.disabled {
             display: none; }
-          #content #posts .post:hover .tools li a,           #content #posts .post:focus .tools li a {
+          #content #posts .post .tools li a {
             display: block;
             background: url("/images/black-25.png");
             color: #fff;
             text-decoration: none;
             padding: 1px 4px;
             -moz-border-radius: 0.25em; }
-            #content #posts .post:hover .tools li a:hover, #content #posts .post:hover .tools li a:focus,             #content #posts .post:focus .tools li a:hover, #content #posts .post:focus .tools li a:focus {
+            #content #posts .post .tools li a:hover, #content #posts .post .tools li a:focus {
               background: url("/images/black-75.png"); }
     #content #posts .note {
       background: #ff6;

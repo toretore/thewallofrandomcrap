@@ -66,6 +66,8 @@ StickyBoard.Post = ActiveElement.Base.spawn('post', {
     var post = this,
         form = this.element.down('.tools .delete form');
 
+    if (!form) return;
+
     //Replace form with a link
     var link = new Element('a', {href:'#', 'class':'delete'});
     link.update(form.down('input[type=submit]').value);
